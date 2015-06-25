@@ -1,0 +1,14 @@
+---
+applications:
+- name: NodeAppOnPrvGithub
+  services:
+  - mycache2-DataCache
+  memory: 128M
+  instances: 1
+  path: .
+  command: node app.js
+
+declared-services:
+  mycache2-DataCache:
+    label: DataCache
+    plan: free
